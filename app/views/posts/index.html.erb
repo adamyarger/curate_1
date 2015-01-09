@@ -1,1 +1,9 @@
-<h1>first</h1>
+<% @posts.each do |post| %>
+	<div class="post_wrapper">
+		<!-- add user name here later -->
+		<p class="media"><%= post.body_html %></p>
+		<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+	</div>
+<% end %>
+
+<%= link_to "Add new post", new_post_path(@post) %>

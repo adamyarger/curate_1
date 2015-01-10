@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-
+	acts_as_votable
 	belongs_to :user
 
 	auto_html_for :body do

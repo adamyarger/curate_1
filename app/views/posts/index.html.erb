@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
 	<div class="post_wrapper">
-		<!-- add user name here later -->
+		<p class="name"><%= post.user.name %></p>
 		<p class="media"><%= post.body_html %></p>
 		<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
 	</div>

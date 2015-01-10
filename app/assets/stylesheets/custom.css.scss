@@ -15,9 +15,9 @@ html {
 }
 
 body {
-  padding-top: 40px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 10px;
+/*  padding-left: 50px;
+  padding-right: 50px;*/
   padding-bottom:30px;
   font-weight: 200;
   background-color: #f8f8f8 ;
@@ -105,9 +105,17 @@ p {
 
 /*Main Posts*/
 
-.wrapper {
+.post_wrapper {
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  margin-bottom: 16px;
+}
+
+.media_wrapper{
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 1%;
+  padding-top: 1%;
 }
 
 

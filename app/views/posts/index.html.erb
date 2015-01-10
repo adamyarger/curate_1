@@ -1,11 +1,13 @@
 <div class="wrapper col-md-6 col-md-offset-3">
 	<% @posts.each do |post| %>
 		<div class="post_wrapper">
-			<p class="name"><%= post.user.name %></p>
-			<p class="media"><%= post.body_html %></p>
-			<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-			<p class="like"><%= link_to "Like", like_post_path(post), method: :get %></p>
-			<p class="like_count"><%= post.get_likes.size %> Likes</p>
+			<div class="media_wrapper">
+				<p class="name"><%= post.user.name %></p>
+				<p class="media"><%= post.body_html %></p>
+				<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+				<p class="like"><%= link_to "Like", like_post_path(post), method: :get %></p>
+				<p class="like_count"><%= post.get_likes.size %> Likes</p>
+			</div>
 		</div>
 	<% end %>
 </div>

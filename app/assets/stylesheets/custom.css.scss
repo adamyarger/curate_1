@@ -118,6 +118,33 @@ p {
   padding-top: 1%;
 }
 
+.button {
+      width: 100%;
+      display: inline-block;
+      padding: .75rem 0;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: #969696;
+      &:hover {
+        color: #50A7C7;
+        border: 1px solid #50A7C7;
+      }
+}
+
+p.date {
+  float:right;
+}
+
+p.name {
+  text-align: center;
+  font-weight: 500;
+}
+
+div.date_and_like {
+  padding-bottom: 5px;
+}
+
 
 /* forms */
 
@@ -167,4 +194,19 @@ border-color: #fff;
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+p.alert{
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-top: 41px;
+  text-align: center;
+}
+
+/*Testsing*/
+
+div.video.youtube{
+  border-radius: 1px;
 }

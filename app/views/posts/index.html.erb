@@ -1,12 +1,20 @@
+
+
 <div class="wrapper col-md-6 col-md-offset-3">
 	<% @posts.each do |post| %>
 		<div class="post_wrapper">
 			<div class="media_wrapper">
-				<p class="name"><%= post.user.name %></p>
+				<p class="name"><%= link_to post.user.name, post.user %></p>    			<!-- links to the users profile -->
 				<p class="media"><%= post.body_html %></p>
-				<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-				<p class="like"><%= link_to "Like", like_post_path(post), method: :get %></p>
-				<p class="like_count"><%= post.get_likes.size %> Likes</p>
+				<div class="date_and_like">
+					<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+		            <span>
+		              <%= link_to like_post_path(post), method: :get, class: "data" do %>
+						  <i class="fa fa-thumbs-o-up"></i>
+						  <%= pluralize(post.get_likes.size, "Like") %>
+					  <% end %>
+		            </span>
+		        </div>
 			</div>
 		</div>
 	<% end %>

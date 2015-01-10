@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -18,6 +19,8 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom:30px;
+  font-weight: 200;
+  background-color: #f8f8f8 ;
 }
 
 section {
@@ -45,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a{
   color:#1E90FF;
+  font-weight: 200;
 }
 
 h1 {
@@ -68,7 +72,43 @@ p {
   line-height: 1.7em;
 }
 
+/* header */
 
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #1E90FF;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #1E90D7;
+  text-decoration: none;
+}
+
+.navbar-fixed-top{
+  top: 0;
+  border-width: 0 0 1px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background-color: #fff;
+}
+
+.underline:hover {
+    display: inline-block;
+    box-shadow: 0 2px #1E90FF;
+    
+}
+
+/*Main Posts*/
+
+.wrapper {
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
 
 
 /* forms */

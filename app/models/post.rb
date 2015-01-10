@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+	belongs_to :user
+
 	auto_html_for :body do
 	    html_escape
 	    image

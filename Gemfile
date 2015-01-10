@@ -13,6 +13,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.4.1'
 gem "auto_html"
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-facebook', '~> 2.0.0'
+gem 'bootstrap-sass', '~> 3.3.1.0'
 
 
 

@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
+
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -209,4 +209,17 @@ p.alert{
 
 div.video.youtube{
   border-radius: 1px;
+}
+
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }

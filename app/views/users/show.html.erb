@@ -1,3 +1,11 @@
 <p class="body">
 	<%= @user.name %>
 </p>
+
+
+	<% if @user.posts.any? %>
+		<h3>Posts (<%= @user.posts.count %>)</h3>
+		<ol class="microposts">
+			<%= render @posts %>
+		</ol>
+	<% end %>

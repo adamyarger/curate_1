@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks"}
+  resources :posts, only: [:create, :destroy]			#since were only displaying on fee and profile pages = no individual pages
   resources :posts do
   	member do
   		get "like", to: "posts#upvote"

@@ -1,24 +1,42 @@
 
-
-<div class="wrapper col-md-6 col-md-offset-3">
-	<% @posts.each do |post| %>
-		<div class="post_wrapper">
-			<div class="media_wrapper">
-				<p class="name"><%= link_to post.id, post.user %></p>    			<!-- links to the users profile -->
-				<p class="media"><%= post.body_html %></p>
-				<div class="date_and_like">
-					<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-		            <span>
-		              <%= link_to like_post_path(post), method: :get, class: "data" do %>
-						  <i class="fa fa-thumbs-o-up"></i>
-						  <%= pluralize(post.get_likes.size, "Like") %>
-					  <% end %>
-		            </span>
-		        </div>
+<% if user_signed_in? %>
+	<div class="wrapper col-md-6 col-md-offset-3">
+		<% @posts.each do |post| %>
+			<div class="post_wrapper">
+				<div class="media_wrapper">
+					<p class="name"><%= link_to post.id, post.user %></p>    			<!-- links to the users profile -->
+					<p class="media"><%= post.body_html %></p>
+					<div class="date_and_like">
+						<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+			            <span>
+			              <%= link_to like_post_path(post), method: :get, class: "data" do %>
+							  <i class="fa fa-thumbs-o-up"></i>
+							  <%= pluralize(post.get_likes.size, "Like") %>
+						  <% end %>
+			            </span>
+			        </div>
+				</div>
 			</div>
-		</div>
-	<% end %>
-</div>
+		<% end %>
+	</div>
+
+	<% else %>
+	<div class="bg">
+	</div>
+		  <div class="center jumbotron">
+		    <h1>Welcome to the Curate</h1>
+
+		    <h2>
+		      A place you can feel free to express yourself. Club life is life!
+		    </h2>
+		    
+		     <li><%= link_to "Register", new_user_registration_path, class: "btn btn-lg btn-primary" %></li>
+		    
+		  </div>
+
+
+  
+<% end %>
 
 
 

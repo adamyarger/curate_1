@@ -4,7 +4,8 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li class="underline"><%= link_to "New Post", new_post_path %></li>
+          <%= render 'post_modal' %>
+          <!-- <li class="underline"><%= link_to "New Post", new_post_path %></li> -->
           <li class="underline"><%= link_to "Feed", root_path %></li>
           <li class="underline"><%= link_to "Users", users_path %></li>
           <li class="dropdown">

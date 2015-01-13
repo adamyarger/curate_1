@@ -7,13 +7,13 @@ class PostsController < ApplicationController
 		@posts = Post.all
 	end
 
-	def show
-		@post = Post.find(params[:id])
-	end
+	# def show
+	# 	@post = Post.find(params[:id])
+	# end
 	
-	def new
-		@post = current_user.posts.build
-	end
+	# def new
+	# 	@post = current_user.posts.build
+	# end
 
 	def create
 		@post = current_user.posts.build(post_params)
@@ -25,16 +25,16 @@ class PostsController < ApplicationController
 		end
 	end
 
-	def edit
-	end
+	# def edit
+	# end
 
-	def update
-		if @post.update(post_params)
-			redirect_to @post
-		else
-			render 'edit'
-		end
-	end
+	# def update
+	# 	if @post.update(post_params)
+	# 		redirect_to @post
+	# 	else
+	# 		render 'edit'
+	# 	end
+	# end
 
 	def destroy
 		@post.destroy

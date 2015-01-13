@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@posts = @user.posts.paginate(page: params[:page])				#nfor pagnation on posts
+		@posts = @user.posts			#nfor pagnation on posts
 	end
 
 

@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 			flash[:success] = "Post Created!"   					# should flash a success message
 			redirect_to root_url
 		else
-			render 'new'   #change to render home page if you want to not have a posts/new url
+			render 'static_pages/home'   #change to render home page if you want to not have a posts/new url
 		end
 	end
 

@@ -40,6 +40,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+li{
+  list-style: none;
+}
+
 
 
 .bg {
@@ -159,16 +163,8 @@ a.btn.btn-lg.btn-primary {
       }
 }
 
-p.date {
-  float:right;
-}
-
-p.name {
-  text-align: center;
-  font-weight: 500;
-}
-p.notice{
-  margin-top: 50px;
+ol.posts {
+  margin-top: 55px;
 }
 
 div.date_and_like {
@@ -280,11 +276,44 @@ a.pull-left.btn.btn-default.btn-large{
 }
 
 a#nav_button{
-  color: #777;
+  color: #1E90FF;
   font-weight: 200;
 }
 
 div.modal-dialog{
   margin-top: 15%;
 }
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+    padding-top: 55px
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+    padding-top: 55px
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+    padding-top: 55px
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+    padding-top: 55px
+ }
 

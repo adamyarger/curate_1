@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :posts, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -15,5 +16,11 @@ class User < ActiveRecord::Base
       end
   end
 
-  has_many :posts
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Post.where("user_id = ?", id)     #essentiall equivlent to posts
+  end
+
+  
 end

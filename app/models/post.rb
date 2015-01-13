@@ -1,8 +1,9 @@
 class Post < ActiveRecord::Base
-	acts_as_votable
 	belongs_to :user
+	acts_as_votable
 	default_scope -> { order(created_at: :desc) }
 	validates :user_id, presence: true
+	validates :body, presence: true, length: {maximum: 140}
 
 	auto_html_for :body do
 	    html_escape

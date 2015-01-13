@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		@posts = Post.all.order('created_at DESC')
+		@posts = Post.all
 	end
 
 	def show
@@ -19,9 +19,9 @@ class PostsController < ApplicationController
 		@post = current_user.posts.build(post_params)
 		if @post.save
 			flash[:success] = "Post Created!"   					# should flash a success message
-			redirect_to @post
+			redirect_to root_url
 		else
-			render 'new'
+			render 'new'   #change to render home page if you want to not have a posts/new url
 		end
 	end
 

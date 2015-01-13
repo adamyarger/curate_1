@@ -1,5 +1,5 @@
 
-<div class="wrapper col-md-6 col-md-offset-3">
+<div class="wrapper col-md-6 col-md-offset-3" >   <!-- adds a CSS id for each micropost using -->
 	
 		<div class="post_wrapper">
 			<div class="media_wrapper">
@@ -13,6 +13,7 @@
 						  <%= pluralize(post.get_likes.size, "Like") %>
 					  <% end %>
 		            </span>
+		            <span class="timestamp"><%= time_ago_in_words(post.created_at) %> ago </span>
 		            
 		        </div>
 			</div>

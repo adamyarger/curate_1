@@ -1,4 +1,8 @@
-<%= form_for(current_user.active_relationships.build) do |f| %>
+<!-- remote:true -> adds ajax to the follow button tells rails to allow form to handled by javascript -->
+
+<%= form_for(current_user.active_relationships.
+                          build(followed_id: @user.id),
+                          remote: true) do |f| %>				
   <div><%= hidden_field_tag :followed_id, @user.id %></div>
-  <%= f.submit "Follow", class: "btn btn-primary follow" %>
+  <%= f.submit "Follow", class: "btn btn-primary" %>
 <% end %>

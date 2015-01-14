@@ -6,7 +6,7 @@
 				<p class="name"><%= link_to post.user.name, post.user %></p>    			<!-- links to the users profile -->
 				<p class="media"><%= post.body_html %></p>
 				<div class="date_and_like">
-					<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+					
 		            <span>
 		              <%= link_to like_post_path(post), method: :get, class: "data" do %>
 						  <i class="fa fa-thumbs-o-up"></i>

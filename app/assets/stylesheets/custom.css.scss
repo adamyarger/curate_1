@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 
+
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -12,6 +14,7 @@
 
 html {
   overflow-y: scroll;
+  font: 14px "brandon-grotesque", helvetica, verdana, arial, sans-serif;
 }
 
 body {
@@ -315,39 +318,49 @@ div.modal-dialog{
  }
 
  /*profile*/
- .profile_ui{
-  
- }
-
- #follow_form{
-  width:216px;
- }
-
- #following_count{
-  padding-right: 64px;
- }
-
- #profile_name{
-  text-align: center;
- }
-
- .center_profile{
-  vertical-align: center;
- }
-
- .profile_top_box{
+/* .profile_ui{
+  border: 1px solid #1E90FF;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  width: 216px;
+ }*/
+
+
+
+/* #following_count{
+  padding-right: 64px;
+ }*/
+
+ #profile_name{
+  background: rgba(0, 0, 0, 0.25);
  }
 
- .follow_btn{
-  margin-top: 10px;
+ .unfollow{
+  color: #1E90FF;
+  background-color: transparent;
+  border-color: #1E90FF;
  }
 
- .profile_pad_box{
-  padding:8px;
- }
+.stylish-panel {
+    padding: 20px 0;
+    text-align: center;
+}
+.stylish-panel > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
 
+.stylish-panel {
+    margin-top: 0px;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    background: rgba(200, 200, 200, 0.1);
+    transition: 0.5s;
+    
+}
 
+.stylish-panel img {
+    border-radius: 3.5%;
+}
 

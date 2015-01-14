@@ -1,26 +1,9 @@
 <!-- Start Left Side Profile -->
-<div class="row">
-	<div class="col-xs-12 col-sm-3 profile_ui">
-		<div class="center_profile">
-			<div class="profile_top_box">
-				<div class="profile_pad_box">
-					<%= image_tag @user.image %>  <!-- displays the facbook picture -->
-					<span id="profile_name">
-						<p><%= @user.name %></p>
-					</span>
-					<section class="stats">
-						<%= render 'shared/stats' %>
-				    </section>
-			    </div>
-		    </div>
-		    <div class="follow_btn">
-			<%= render 'users/follow_form' if user_signed_in? %>
-			</div>
-		</div>
-	</div>
+<div class="row ">
+<%= render 'users/profile_ui' %>
 
-		<!-- <p>Posts (<%= @user.posts.count %>)</p>  for post count -->
-	<div class=" col-xs-12 col-sm-9 profile_posts">
+		<!--   for post count -->
+	<div class=" col-lg-9 col-md-8 profile_posts">
 		<% if @user.posts.any? %>
 			<ol class="microposts">
 				<%= render @posts %>
@@ -28,4 +11,5 @@
 		<% end %>
 	</div>
 </div>
-	
+
+

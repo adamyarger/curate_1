@@ -46,6 +46,7 @@ class PostsController < ApplicationController
 		redirect_to :back
 	end
 
+
 	private
 		# this is used by multiple methods
 		def find_post

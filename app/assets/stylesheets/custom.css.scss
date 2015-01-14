@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  padding-top: 10px;
+  padding-top: 60px;
 /*  padding-left: 50px;
   padding-right: 50px;*/
   padding-bottom:30px;
@@ -67,10 +67,13 @@ li{
 }
 
 
+
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  margin:0;
 }
 
 a{
@@ -96,7 +99,7 @@ h2 {
 
 p {
   font-size: 1.1em;
-  line-height: 1.7em;
+  
 }
 
 a.btn.btn-lg.btn-primary {
@@ -222,20 +225,14 @@ border-color: #fff;
   margin-left: 0;
 }
 
-p.alert{
+/*p.alert{
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
   margin-top: 41px;
   text-align: center;
-}
-
-/*Testsing*/
-
-div.video.youtube{
-  border-radius: 1px;
-}
+}*/
 
 
 /* Users index */
@@ -319,6 +316,38 @@ div.modal-dialog{
 
  /*profile*/
  .profile_ui{
-  margin-top: 100px;
+  
  }
+
+ #follow_form{
+  width:216px;
+ }
+
+ #following_count{
+  padding-right: 64px;
+ }
+
+ #profile_name{
+  text-align: center;
+ }
+
+ .center_profile{
+  vertical-align: center;
+ }
+
+ .profile_top_box{
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  width: 216px;
+ }
+
+ .follow_btn{
+  margin-top: 10px;
+ }
+
+ .profile_pad_box{
+  padding:8px;
+ }
+
+
 

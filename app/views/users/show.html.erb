@@ -1,18 +1,31 @@
-<div class="profile_ui">
-<p class="body">
-	<%= @user.name %>
-</p>
-		<section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
-<%= render 'users/follow_form' if user_signed_in? %>
-</div>
-	<% if @user.posts.any? %>
-		<h3>Posts (<%= @user.posts.count %>)</h3>
-		<ol class="microposts">
-			<%= render @posts %>
-		</ol>
-		
-	<% end %>
+<!-- Start Left Side Profile -->
+<div class="row">
+	<div class="col-xs-12 col-sm-3 profile_ui">
+		<div class="center_profile">
+			<div class="profile_top_box">
+				<div class="profile_pad_box">
+					<%= image_tag @user.image %>  <!-- displays the facbook picture -->
+					<span id="profile_name">
+						<p><%= @user.name %></p>
+					</span>
+					<section class="stats">
+						<%= render 'shared/stats' %>
+				    </section>
+			    </div>
+		    </div>
+		    <div class="follow_btn">
+			<%= render 'users/follow_form' if user_signed_in? %>
+			</div>
+		</div>
+	</div>
 
+		<!-- <p>Posts (<%= @user.posts.count %>)</p>  for post count -->
+	<div class=" col-xs-12 col-sm-9 profile_posts">
+		<% if @user.posts.any? %>
+			<ol class="microposts">
+				<%= render @posts %>
+			</ol>
+		<% end %>
+	</div>
+</div>
 	

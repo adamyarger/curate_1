@@ -1,8 +1,12 @@
+<div class="profile_ui">
 <p class="body">
 	<%= @user.name %>
 </p>
-
-
+		<section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+<%= render 'users/follow_form' if user_signed_in? %>
+</div>
 	<% if @user.posts.any? %>
 		<h3>Posts (<%= @user.posts.count %>)</h3>
 		<ol class="microposts">
@@ -10,3 +14,5 @@
 		</ol>
 		
 	<% end %>
+
+	

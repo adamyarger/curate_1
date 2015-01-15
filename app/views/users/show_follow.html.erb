@@ -1,0 +1,14 @@
+<!-- dosent use current user anywhere so the same links work for other users -->
+
+<div class="row">
+<%= render 'users/profile_ui' %>
+  <div class="col-md-8">
+    <!-- <h3><%= @title %></h3> -->
+    <% if @users.any? %>
+      <ul class="users follow">
+        <%= render @users %>
+      </ul>
+ <!-- will paginate goes here -->
+    <% end %>
+  </div>
+</div>

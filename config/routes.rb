@@ -11,5 +11,10 @@ Rails.application.routes.draw do
 
   # resources :users
   resources :users, only: [:show, :index] # change to resources :users if you want to set up admin
-
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships,       only: [:create, :destroy]
 end

@@ -1,0 +1,15 @@
+	<div class="col-md-4 stylish-panel">
+			<div class="null">
+				<span id="profile_name">
+					<p><%= @user.name %></p>
+				</span>
+				<%= image_tag @user.image %>  <!-- displays the facbook picture -->
+				<section class="stats">
+					<%= render 'shared/stats' %>
+			    </section>
+		    </div>
+	    
+	    <div class="follow_btn">
+		<%= render 'users/follow_form' if user_signed_in? %>
+		</div>
+	</div>

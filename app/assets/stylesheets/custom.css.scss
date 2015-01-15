@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 
+
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -12,10 +14,11 @@
 
 html {
   overflow-y: scroll;
+  font: 14px "brandon-grotesque", helvetica, verdana, arial, sans-serif;
 }
 
 body {
-  padding-top: 10px;
+  padding-top: 60px;
 /*  padding-left: 50px;
   padding-right: 50px;*/
   padding-bottom:30px;
@@ -67,10 +70,13 @@ li{
 }
 
 
+
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  margin:0;
 }
 
 a{
@@ -96,7 +102,7 @@ h2 {
 
 p {
   font-size: 1.1em;
-  line-height: 1.7em;
+  
 }
 
 a.btn.btn-lg.btn-primary {
@@ -222,20 +228,14 @@ border-color: #fff;
   margin-left: 0;
 }
 
-p.alert{
+/*p.alert{
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
   margin-top: 41px;
   text-align: center;
-}
-
-/*Testsing*/
-
-div.video.youtube{
-  border-radius: 1px;
-}
+}*/
 
 
 /* Users index */
@@ -290,7 +290,7 @@ div.modal-dialog{
     border-color: #eed3d7;
     color: #b94a48;
     text-align: left;
-    padding-top: 55px
+    
  }
 
 .alert-alert {
@@ -298,7 +298,7 @@ div.modal-dialog{
     border-color: #eed3d7;
     color: #b94a48;
     text-align: left;
-    padding-top: 55px
+    
  }
 
 .alert-success {
@@ -306,7 +306,7 @@ div.modal-dialog{
     border-color: #d6e9c6;
     color: #468847;
     text-align: left;
-    padding-top: 55px
+    
  }
 
 .alert-notice {
@@ -314,6 +314,53 @@ div.modal-dialog{
     border-color: #d6e9c6;
     color: #468847;
     text-align: left;
-    padding-top: 55px
+    
  }
+
+ /*profile*/
+/* .profile_ui{
+  border: 1px solid #1E90FF;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+ }*/
+
+
+
+/* #following_count{
+  padding-right: 64px;
+ }*/
+
+ #profile_name{
+  background: rgba(0, 0, 0, 0.25);
+ }
+
+ .unfollow{
+  color: #1E90FF;
+  background-color: transparent;
+  border-color: #1E90FF;
+ }
+
+.stylish-panel {
+    padding: 20px 0;
+    text-align: center;
+}
+.stylish-panel > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.stylish-panel {
+    margin-top: 0px;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    background: rgba(200, 200, 200, 0.1);
+    transition: 0.5s;
+    
+}
+
+.stylish-panel img {
+    border-radius: 3.5%;
+}
 

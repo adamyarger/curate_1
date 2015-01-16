@@ -1,0 +1,6 @@
+<% if @user.provider? %>
+	<%= image_tag @user.image %>  <!-- displays the facbook picture -->
+<% else %>
+	<li class="round-image-50"><%= image_tag(@user.avatar.url(:medium)) %></li>
+<% end %>
+				

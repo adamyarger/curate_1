@@ -1,0 +1,10 @@
+<% if @user.provider? %>
+	<span class="thumb_avatar">
+	<%= image_tag @user.image %>  <!-- displays the facbook picture -->
+	</span>
+<% else %>
+	<span class="thumb_avatar">
+	<%= image_tag(@user.avatar.url(:thumb)) %>
+	</span>
+<% end %>
+

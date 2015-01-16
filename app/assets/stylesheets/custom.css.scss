@@ -144,7 +144,7 @@ a.btn.btn-lg.btn-primary {
 
 .post_wrapper {
   background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
 }
 
@@ -338,6 +338,7 @@ div.modal-dialog{
   color: #1E90FF;
   background-color: transparent;
   border-color: #1E90FF;
+  font-weight: 200;
  }
 
 .stylish-panel {
@@ -355,8 +356,8 @@ div.modal-dialog{
 .stylish-panel {
     margin-top: 0px;
     background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  margin-bottom: 16px;
+    box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
     
 }
 
@@ -365,5 +366,16 @@ div.modal-dialog{
     padding: 4px;
     border-color: #fff;
     border: 1px solid #dddddd;
+    width:210px;
+}
+
+/*avatar*/
+
+.thumb_avatar img{
+  border-radius: 50%;
+  padding: 2px;
+  border-color: #fff;
+  border: 1px solid #dddddd;
+  width:30px;
 }
 

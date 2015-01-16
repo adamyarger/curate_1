@@ -3,7 +3,12 @@
 				<span id="profile_name">
 					<p><%= @user.name %></p>
 				</span>
-				<%= image_tag @user.image %>  <!-- displays the facbook picture -->
+
+				<!-- if the current user has facebook connected use that photo else use uploaded one -->
+				<%= render 'users/avatar_medium' %>
+
+
+
 				<section class="stats">
 					<%= render 'shared/stats' %>
 			    </section>

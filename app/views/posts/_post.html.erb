@@ -3,7 +3,8 @@
 	
 		<div class="post_wrapper">
 			<div class="media_wrapper">
-				<p class="name"><%= link_to post.user.name, post.user, class: "name" %></p>    			<!-- links to the users profile -->
+				
+				<span class="name"><%= link_to post.user.name, post.user, class: "name" %></span>    			<!-- links to the users profile -->
 				<p class="media"><%= post.body_html %></p>
 				<div class="date_and_like">
 					

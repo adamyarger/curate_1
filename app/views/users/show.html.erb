@@ -1,13 +1,16 @@
 <!-- Start Left Side Profile -->
 <div class="row ">
-<%= render 'users/profile_ui' %>
+
+
+	<%= render 'users/profile_ui' %>
+
 
 		<!--   for post count -->
-	<div class=" col-lg-9 col-md-8 profile_posts">
+	<div class=" col-md-9 col-sm-12 profile_posts">
 		<% if @user.posts.any? %>
-			<ol class="microposts">
+			
 				<%= render @posts %>
-			</ol>
+			
 		<% end %>
 	</div>
 </div>
